@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>三個欄位網頁</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+            position: relative; /* Add position relative to enable absolute positioning of search */
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+        }
+
+        .column {
+            flex-basis: 30%;
+            background-color: #222;
+            padding: 20px;
+            margin: 0 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            display: flex; /* 添加 Flexbox 佈局 */
+            flex-direction: column; /* 讓內部元素垂直排列 */
+        }
+
+        .column:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .column img {
+            width: 100%;
+            max-width: 340px;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .column h2 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 10px;
+            color: #fff;
+        }
+
+        /* 搜索引擎 */
+        .search-container {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .search-container input[type=text] {
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            width: 200px;
+        }
+
+        .search-container button {
+            padding: 10px 15px;
+            background: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Engine</title>
+    <style>
+        /* Styles for search bar */
+        .search-container {
+            position: fixed; /* Change to fixed to keep it fixed on the screen */
+            top: 20px;
+            right: 20px;
+            z-index: 9999; /* Set a high z-index value */
+        }
+
+        .search-container input[type=text] {
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            width: 200px;
+        }
+
+        .search-container button {
+            padding: 10px 15px;
+            background: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .search-container {
+    position: fixed; /* Keep it fixed on the screen */
+    top: 20px;
+    right: 20px;
+    z-index: 9999; /* Set a high z-index value */
+}
+
+.search-container input[type=text] {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    width: 200px;
+}
+
+.search-container button {
+    padding: 10px 15px;
+    background: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    </style>
+</head>
+<body>
+    <!-- Search bar -->
+    <div class="search-container">
+        <input id="searchInput" type="text" placeholder="Enter keywords...">
+        <button onclick="searchSimilar()">Search</button>
+    </div>
+
+    <script>
+        function searchSimilar() {
+            // Get the value of the input field
+            var keyword = document.getElementById("searchInput").value;
+            
+            // Replace spaces with '+' for URL compatibility
+            keyword = keyword.replace(/\s+/g, '+');
+            
+            // Redirect the user to a page with similar keywords
+            window.location.href = "https://example.com/search?q=" + keyword;
+        }
+    </script>
+</body>
+</html>
+
+
+    <div class="image-container">
+        <div class="column">
+            <div class="content">
+                <img src="圖片/p1.jpg" alt="圖片1">
+                <h2>標題1</h2>
+            </div>
+            <p>這是欄位1的文字內容。可以放一些描述這個欄位的文字。</p>
+        </div>
+        <div class="column">
+            <div class="content">
+                <img src="圖片/p2.jpg" alt="圖片2">
+                <h2>標題2</h2>
+            </div>
+            <p>這是欄位2的文字內容。可以放一些描述這個欄位的文字。</p>
+        </div>
+        <div class="column">
+            <div class="content">
+                <img src="圖片/p3.jpg" alt="圖片3">
+                <h2>標題3</h2>
+            </div>
+            <p>這是欄位3的文字內容。可以放一些描述這個欄位的文字。</p>
+        </div>
+        <div class="column">
+            <div class="content">
+                <img src="圖片/p4.jpg" alt="圖片4">
+                <h2>標題4</h2>
+            </div>
+            <p>這是欄位4的文字內容。可以放一些描述這個欄位的文字。</p>
+        </div>
+        <div class="column">
+            <div class="content">
+                <img src="圖片/p5.jpg" alt="圖片5">
+                <h2>標題5</h2>
+            </div>
+            <p>這是欄位5的文字內容。可以放一些描述這個欄位的文字。</p>
+        </div>
+        <div class="column">
+            <div class="content">
+                <img src="圖片/p6.jpg" alt="圖片6">
+                <h2>標題6</h2>
+            </div>
+            <p>這是欄位6的文字內容。可以放一些描述這個欄位的文字。</p>
+        </div>
+    </div>
+</body>
+</html>
